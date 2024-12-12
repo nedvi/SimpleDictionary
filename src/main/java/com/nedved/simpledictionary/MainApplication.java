@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MainApplication extends Application {
+
     /** Datovy model */
     public DataModel dataModel;
 
