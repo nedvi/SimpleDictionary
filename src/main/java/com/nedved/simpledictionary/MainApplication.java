@@ -18,6 +18,7 @@ public class MainApplication extends Application {
 
     /** Datovy model */
     public DataModel dataModel;
+
     FXMLLoader fxmlLoader;
 
     public static void main(String[] args) {
