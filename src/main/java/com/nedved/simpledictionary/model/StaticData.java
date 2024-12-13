@@ -1,6 +1,7 @@
 package com.nedved.simpledictionary.model;
 
 public class StaticData {
+
     public static final String CZECH_TO_ENGLISH = "czechToEnglish";
 
     public static final String ENGLISH_TO_CZECH = "englishToCzech";
