@@ -8,20 +8,20 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JsonUtilities {
 
-    private static final String FILE_PATH = "dictionaries/englishToCzech.json";
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     // Save HashMap to a file
-    public static void saveHashMapToFile(HashMap<String, String> map) throws IOException {
-        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(FILE_PATH), map);
+    public static void saveHashMapToFile(String dictionaryName, HashMap<String, String> map) throws IOException {
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("dictionaries/" + dictionaryName + ".json"), map);
     }
 
     // Load HashMap from a file
-    public static HashMap<String, String> loadHashMapFromFile() {
+    public static HashMap<String, String> loadHashMapFromFile(String dictionaryName) {
         HashMap<String, String> fileHashMap = null;
         try {
-            fileHashMap = objectMapper.readValue(new File(FILE_PATH), new TypeReference<HashMap<String, String>>() {});
+            fileHashMap = objectMapper.readValue(new File("dictionaries/" + dictionaryName + ".json"), new TypeReference<HashMap<String, String>>() {});
+            System.out.println("Dictionary loaded.");
             return fileHashMap;
         } catch (IOException e) {
             System.out.println("No dictionary found!");
