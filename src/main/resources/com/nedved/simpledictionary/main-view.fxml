@@ -8,35 +8,85 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.SearchableComboBox?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nedved.simpledictionary.controller.MainController">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="680.0" styleClass="gridPane" stylesheets="@styles/darkStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nedved.simpledictionary.controller.MainController">
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="214.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="220.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="157.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="229.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="220.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="110.0" valignment="BOTTOM" />
-    <RowConstraints maxHeight="173.0" minHeight="0.0" prefHeight="151.0" vgrow="ALWAYS" />
-    <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="139.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="204.0" minHeight="0.0" prefHeight="100.0" valignment="CENTER" />
+    <RowConstraints maxHeight="304.0" minHeight="0.0" prefHeight="257.0" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label fx:id="leftLangLabel" alignment="CENTER" contentDisplay="CENTER" text="Angličtina" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
-         <font>
-            <Font size="18.0" />
-         </font></Label>
-      <Label fx:id="rightLangLabel" contentDisplay="CENTER" text="Čeština" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
-         <font>
-            <Font size="18.0" />
-         </font></Label>
-      <SearchableComboBox fx:id="searchableCB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="190.0" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+      <VBox alignment="CENTER" spacing="2.0" styleClass="wordContainer" stylesheets="@styles/darkStyle.css" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="leftLangLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="langLabel" stylesheets="@styles/darkStyle.css" text="Angličtina" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="chosenWordLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="206.0" prefWidth="292.0" styleClass="translatedWordLabel" stylesheets="@styles/darkStyle.css" text="      " textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="5.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <SearchableComboBox fx:id="searchableCB" prefHeight="80.0" prefWidth="305.0" styleClass="searchableCB" stylesheets="@styles/darkStyle.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin></SearchableComboBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
          <GridPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets bottom="3.0" left="10.0" right="3.0" top="3.0" />
          </GridPane.margin>
-      </SearchableComboBox>
-      <Button fx:id="languageReverseBTN" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onLanguageReverseBTNClicked" prefHeight="50.0" prefWidth="50.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="2.0" styleClass="wordContainer" stylesheets="@styles/darkStyle.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="rightLangLabel" contentDisplay="CENTER" styleClass="langLabel" stylesheets="@styles/darkStyle.css" text="Čeština" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="translatedWordLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="503.0" prefWidth="509.0" styleClass="translatedWordLabel" stylesheets="@styles/darkStyle.css" text="      " textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="3.0" left="3.0" right="10.0" top="3.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="languageReverseBTN" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onLanguageReverseBTNClicked" prefHeight="50.0" prefWidth="50.0" styleClass="editDeleteButton" stylesheets="@styles/darkStyle.css" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
@@ -44,20 +94,13 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
          <graphic>
-            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/reverse-arrows-icon-50.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Label fx:id="translatedWord" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="213.0" text="      " textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-         <GridPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </GridPane.margin></Label>
-      <Button mnemonicParsing="false" onAction="#onEditBTNClicked" prefHeight="50.0" prefWidth="50.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      <Button mnemonicParsing="false" onAction="#onEditBTNClicked" prefHeight="50.0" prefWidth="50.0" styleClass="editDeleteButton" stylesheets="@styles/darkStyle.css" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
@@ -69,7 +112,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button mnemonicParsing="false" onAction="#onNewWordBTNClicked" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      <Button mnemonicParsing="false" onAction="#onNewWordBTNClicked" prefHeight="50.0" prefWidth="50.0" styleClass="plusButton" stylesheets="@styles/darkStyle.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
@@ -81,7 +124,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button mnemonicParsing="false" onAction="#onDeleteBTNClicked" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      <Button mnemonicParsing="false" onAction="#onDeleteBTNClicked" prefHeight="50.0" prefWidth="50.0" styleClass="editDeleteButton" stylesheets="@styles/darkStyle.css" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
@@ -93,5 +136,39 @@
             </ImageView>
          </graphic>
       </Button>
+      <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="RIGHT" depthTest="DISABLE" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onInfoBTNClicked" prefHeight="50.0" prefWidth="50.0" styleClass="infoButton" stylesheets="@styles/darkStyle.css" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/info-icon-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="224.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="221.0" text="Simple Dictionary" textFill="#cdcdcd" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </VBox>
    </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </GridPane>

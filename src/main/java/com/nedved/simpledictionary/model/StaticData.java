@@ -1,5 +1,11 @@
 package com.nedved.simpledictionary.model;
 
+/**
+ * Trida se statickymi hodnotami pro pristup odkudkoli
+ *
+ * @author Dominik Nedved
+ * @version 13.12.2024
+ */
 public class StaticData {
 
     public static final String CZECH_TO_ENGLISH = "czechToEnglish";

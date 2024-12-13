@@ -12,159 +12,109 @@
     -fx-border-radius: 10px;
     -fx-border-color: transparent;
     -fx-wrap-text: true;
-    -fx-text-fill: #0c162b;
-    -fx-font-size: 20px;
+    -fx-font-size: 8px;
     -fx-font-family: Roboto, serif;
 }
 
-.cardViewVBox {
-    -fx-background-color: #27498c;
-    -fx-background-radius: 20px;
-}
-
-.newCardButton, .newFolderButton, .saveCardButton, .folderTree .tree-cell:selected {
+.wordContainer {
     -fx-background-color: #27498c;
     -fx-background-radius: 10px;
-    -fx-text-fill: WHITE;
+    -fx-border-radius: 10px;
 }
 
-.startQuizButton {
+.plusButton {
     -fx-background-color: #00965a;
     -fx-background-radius: 10px;
     -fx-text-fill: WHITE;
 }
 
-.startQuizButton:hover {
+.plusButton:hover {
     -fx-background-color: #00b731;
 }
 
-.header {
-    -fx-background-color: #0c162b;;
-}
-
-.timeLabel {
-    -fx-text-fill: WHITE;
-}
-
-.cancelButton {
-    -fx-background-color: #d03636;
-    -fx-background-radius: 10px;
-    -fx-text-fill: WHITE;
-}
-
-.cancelButton:hover {
-    -fx-background-color: #ff0000;
-}
-
-.newCardButton:hover, .newFolderButton:hover, .backButton:hover, .miniCardVBox:hover, .cardViewVBox:hover, .navigationButton:hover, .saveCardButton:hover, .folderTree .tree-cell:hover {
-    -fx-background-color: #2e80c0;
-}
-
-.folderTree .tree-cell:hover {
-    -fx-background-radius: 10px;
-}
-
-.folderTree .tree-cell:hover:empty {
-    -fx-background-color: transparent;
-}
-
-.gridPane, .cardViewHBox, .createCardVBox, .folderTree, .folderTree .tree-cell {
-    -fx-background-color: #0c162b;
-    -fx-font-size: 20px;
-    -fx-text-fill: WHITE;
-}
-
-.folderTree .tree-cell:selected {
-    -fx-font-weight: bold ;
-    -fx-background-radius: 10px;
-}
-
-.text-field {
-    -fx-font-size: 15px;
-    -fx-pref-width: 35px;
-}
-
-.miniCardVBox, .backButton, .navigationButton {
-    -fx-background-color: #27498c;
-    -fx-background-radius: 10px;
-    -fx-wrap-text: true;
-    -fx-text-alignment: center;
-}
-
-.miniCardVBox, .miniCardLabel, .navigationButton {
-    -fx-text-fill: WHITE;
-    -fx-font-size: 20px;
-    -fx-wrap-text: true;
-    -fx-text-alignment: center;
-    -fx-alignment: center;
-}
-
-.scrollPane, .stackPane {
-    -fx-background-color: #0c162b;
-}
-
 .editDeleteButton {
-    -fx-background-color: #27498c;
+    -fx-background-color: #8f8f8f;
+    -fx-background-radius: 10px;
 }
 
 .editDeleteButton:hover {
+    -fx-background-color: #cccccc;
+}
+
+.infoButton {
+    -fx-background-color: transparent;
+}
+
+.infoButton:hover {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 30px;
+}
+
+.langLabel {
+    -fx-text-fill: WHITE;
+    -fx-font-weight: bold;
+}
+
+.translatedWordLabel {
+    -fx-text-fill: WHITE;
+    -fx-font-size: 28;
     -fx-background-color: #2e80c0;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: transparent;
 }
 
-.scroll-bar:horizontal .track,
-.scroll-bar:vertical .track{
-    -fx-background-color:#27498c;
-    -fx-border-color :transparent;
-    -fx-background-radius : 0.0em;
-    -fx-border-radius :2.0em;
+.gridPane {
+    -fx-background-color: #0c162b;
+    -fx-font-size: 20px;
+    -fx-text-fill: WHITE;
 }
 
-
-.scroll-bar:horizontal .increment-button ,
-.scroll-bar:horizontal .decrement-button {
-    -fx-background-color :transparent;
-    -fx-background-radius : 0.0em;
-    -fx-padding :0.0 0.0 10.0 0.0;
-
+.searchable-combo-box {
+    -fx-background-color: #2e80c0;
+    -fx-font-size: 14px;
+    -fx-text-fill: WHITE;
+    -fx-border-radius: 20px;
 }
 
-.scroll-bar:vertical .increment-button ,
-.scroll-bar:vertical .decrement-button {
-    -fx-background-color :transparent;
-    -fx-background-radius : 0.0em;
-    -fx-padding :0.0 10.0 0.0 0.0;
-
+.searchable-combo-box:hover {
+    -fx-background-color: #8f8f8f;
 }
 
-.scroll-bar .increment-arrow,
-.scroll-bar .decrement-arrow{
-    -fx-shape : " ";
-    -fx-padding :0.15em 0.0;
+.searchable-combo-box .text-field {
+    -fx-background-color: #2e80c0;
+    -fx-border-radius: 20px;
+    -fx-text-fill: WHITE;
 }
 
-.scroll-bar:vertical .increment-arrow,
-.scroll-bar:vertical .decrement-arrow{
-    -fx-shape : " ";
-    -fx-padding :0.0 0.15em;
+.searchable-combo-box .list-view {
+    -fx-padding: 0px;
 }
 
-.scroll-bar:horizontal .thumb,
-.scroll-bar:vertical .thumb {
-    -fx-background-color :#0c162b;
-    -fx-background-insets : 2.0, 0.0, 0.0;
-    -fx-background-radius : 2.0em;
+.searchable-combo-box .list-view .list-cell {
+    -fx-background-color: #0c162b;
+    -fx-text-fill: WHITE;
 }
 
-.scroll-bar:horizontal .thumb:hover,
-.scroll-bar:vertical .thumb:hover {
-    -fx-background-color :#2e80c0;
-    -fx-background-insets : 2.0, 0.0, 0.0;
-    -fx-background-radius : 2.0em;
+.searchable-combo-box .list-view .list-cell:hover {
+    -fx-background-color: #2e80c0;
 }
 
 .alertDP {
     -fx-background-color: #0c162b;
     -fx-text-fill: WHITE;
+}
+
+.alertDP .label {
+    -fx-text-fill: WHITE;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.alertDP .text-field {
+    -fx-text-fill: WHITE;
+    -fx-font-size: 14px;
+    -fx-background-color: #2e80c0;
 }
 
 .alertDP .button {
