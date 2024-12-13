@@ -130,7 +130,6 @@ public class MainController {
         createNewWordDialog(true);
     }
 
-
     /**
      * Vytvori a zobrazi dialog zavisly na parametru editMode, podle ktereho se zobrazi a nasledne vykona editace nebo vytvoreni noveho slova
      * @param editMode true pro editacni mod, false pro mod vytvoreni noveho slova
