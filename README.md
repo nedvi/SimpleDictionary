@@ -17,7 +17,7 @@
 * Ke spuštění stačí adresář **app**
 * Program spouštět přes **Run.bat**
 * Soubory **.json** slouží k ukládání/načítání dat slovníků
-* 
+  
 ## Screenshots
 ![screenshot_01](screenshots/screenshot_01.PNG?raw=true "screenshot_01")
 ![screenshot_02](screenshots/screenshot_02.PNG?raw=true "screenshot_02")
